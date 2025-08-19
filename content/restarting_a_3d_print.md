@@ -55,3 +55,5 @@ Then you come to the point after you've inserted the custom code and it'll move 
 My eyeballing was probably off by a layer, but it didn't matter and it completed successfully - saving a print, a bunch of filament, and a few hours!
 
 ![Final Print](final_print.jpg)
+
+For any comments or feedback please leave a comment on the PR: [Restarting a 3D print](https://github.com/gameldar/the-second-drawer/pull/3)
