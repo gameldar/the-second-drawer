@@ -1,0 +1,34 @@
+[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #222529;
+    --bg-light: #464949;
+    --text: #d6d6d6;
+    --text-light: #dbd5bc;
+    --accent: #78b6ad;
+    --accent-light: #87c9e5;
+    --accent-text: var(--bg);
+    --border: #dbd5bc;
+    --link: #a2b8e2;
+}
+
+#footer-container {
+    justify-content: center;
+}
+#footer-container img {
+    display: block;
+    margin: 0.5rem auto;
+    width: clamp(80px, 50vw, 200px);
+    height: auto;
+}
+
+img,
+video {
+    height: auto;
+    padding: 0.125rem;
+    border: none;
+}
+
+div code {
+    color: #51753c;
+    background: none;
+}
