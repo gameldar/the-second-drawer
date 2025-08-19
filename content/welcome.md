@@ -12,3 +12,5 @@ In mine I have everything from measuring cups, to spatulas, to random tools that
 In this blog you'll likely find a similar eclectic collection of things, probably with a computing/programming bent.
 
 So welcome, hopefully you find something useful.
+
+For any comments or feedback please leave a comment on the PR: [Welcome to The Second Drawer](https://github.com/gameldar/the-second-drawer/pull/1)
