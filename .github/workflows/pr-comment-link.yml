@@ -1,0 +1,46 @@
+name: Add PR Comment Link to Markdown
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  add-pr-link:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Find single .md file changed in PR
+        id: find_md
+        run: |
+          # Get the list of .md files changed in the PR
+          md_files=$(gh pr view ${{ github.event.pull_request.number }} --json files -q '.files[].path' | grep '\.md$')
+          count=$(echo "$md_files" | wc -l)
+          if [ "$count" -ne 1 ]; then
+            echo "Error: Expected exactly one .md file in PR, found $count."
+            exit 1
+          fi
+          echo "md_file=$(echo "$md_files" | head -n1)" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Append PR comment link to .md file
+        run: |
+          pr_url="${{ github.event.pull_request.html_url }}"
+          pr_title="${{ github.event.pull_request.title }}"
+          echo -e "\nFor any comments or feedback please leave a comment on the PR: [$pr_title]($pr_url)" >> "${{ steps.find_md.outputs.md_file }}"
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${{ steps.find_md.outputs.md_file }}"
+          git commit -m "Add PR comment link to markdown file"
+          git push
