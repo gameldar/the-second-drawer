@@ -51,3 +51,5 @@ apps:
       - network
       - network-bind
 ```
+
+For any comments or feedback please leave a comment on the PR: [Converting deb packages to a snap](https://github.com/gameldar/the-second-drawer/pull/4)
