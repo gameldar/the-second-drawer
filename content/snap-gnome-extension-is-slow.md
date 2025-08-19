@@ -14,3 +14,5 @@ apps:
 
 The first time you run `snapcraft` it will actually be very slow and won't give you any feedback other than a timer running behind the `Installing build-snaps` line. Looking at the log of the snap it indicates it is waiting on the terminal, but it is actually installing things, such as the mesa and gnome dependencies. It took about 10 minutes to run for me, after I finally decided it was actually doing something and waited.
 
+
+For any comments or feedback please leave a comment on the PR: [Snap Gnome Extension is Slow to Install](https://github.com/gameldar/the-second-drawer/pull/2)
