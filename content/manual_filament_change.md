@@ -3,7 +3,7 @@ title = "Manual Filament Change"
 date = 2025-05-23
 +++
 
-When [fixing up the print](restarting_a_3d_print.md) recently, I also needed to change filaments as I switched from the wood PLA to a white PLA for some text to be printed on the top.
+When [fixing up the print](/restarting-a-3d-print/) recently, I also needed to change filaments as I switched from the wood PLA to a white PLA for some text to be printed on the top.
 I've done this before - in OrcaSlicer after you first slice the print you can look at the layers in the `Preview` mode to find the layer where you want to change the filament (you can use the up and down arrows to go layer by layer).
 Once you find the level, right click on the bar on the right and choose `Add Pause`.
 
