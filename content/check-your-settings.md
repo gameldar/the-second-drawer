@@ -48,3 +48,5 @@ So the lesson learned is to actually [read the instructions](https://www.klipper
 
 
 
+
+For any comments or feedback please leave a comment on the PR: [Check your settings post](https://github.com/gameldar/the-second-drawer/pull/7)
